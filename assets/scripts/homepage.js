@@ -64,7 +64,7 @@ const top10Slider = new Swiper('.top-10', {
 
   // Navigation arrows
   navigation: {
-    nextEl: '.news-btn.swiper-button-next',
-    prevEl: '.news-btn.swiper-button-prev',
+    nextEl: '.top-10.swiper-button-next',
+    prevEl: '.top-10.swiper-button-prev',
   },
 })
