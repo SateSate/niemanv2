@@ -10,6 +10,12 @@
 // special offers homepage
 @import './components/special-offers-hp.scss';
 
+// news section homepage
+@import './components/news-section-hp.scss';
+
+// product found in top 10
+@import './components/product-offer.scss';
+
 body {
   font-family: 'Inter', sans-serif;
   font-weight: 400;
@@ -44,4 +50,46 @@ body {
   line-height: 48px;
   color: #fff;
   margin-bottom: 20px;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 38px;
+  color: $blue;
+}
+
+.white-bg-section {
+  padding: 40px 80px;
+  margin-bottom: 60px;
+  position: relative;
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 23px;
+    a {
+      font-weight: 400;
+      font-size: 18px;
+    }
+  }
+  .swiper-button {
+    width: 44px;
+    height: 44px;
+    background: #f7f7f7;
+    border: 1px solid #e5e5e5;
+    border-radius: 50%;
+  }
+  ul {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    .all {
+      border-right: 1px solid $blue;
+      padding-right: 20px;
+    }
+    .active {
+      color: $blue;
+    }
+  }
 }

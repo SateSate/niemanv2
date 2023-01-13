@@ -16,8 +16,8 @@ const featureSliders = new Swiper('.feature-slider', {
   },
   // Navigation arrows
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: '.main-btn.swiper-button-next',
+    prevEl: '.main-btn.swiper-button-prev',
   },
 })
 
@@ -32,7 +32,39 @@ const specialOffers = new Swiper('.special-offers-slider', {
 
   // Navigation arrows
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: '.offers-btn.swiper-button-next',
+    prevEl: '.offers-btn.swiper-button-prev',
+  },
+})
+
+// news slider
+const newsSlider = new Swiper('.news-slider', {
+  slidesPerView: 4,
+  // Optional parameters
+  speed: 500,
+  loop: true,
+
+  spaceBetween: 50,
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.news-btn.swiper-button-next',
+    prevEl: '.news-btn.swiper-button-prev',
+  },
+})
+
+// top10 slider
+const top10Slider = new Swiper('.top-10', {
+  slidesPerView: 4,
+  // Optional parameters
+  speed: 500,
+  loop: true,
+
+  spaceBetween: 50,
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.news-btn.swiper-button-next',
+    prevEl: '.news-btn.swiper-button-prev',
   },
 })
