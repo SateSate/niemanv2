@@ -248,6 +248,7 @@ h6 {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: 8px;
 }
 .feature-grid .grid-item:not(.main-grid)::after {
   content: "";
@@ -305,12 +306,17 @@ h6 {
   max-height: 350px;
   object-fit: cover;
 }
+.feature-slider .swiper-pagination {
+  padding: 5px 0;
+  bottom: 0;
+}
 .feature-slider .swiper-button {
   width: 46.04px;
   height: 42.95px;
   background: #ff9300;
   border: 1px solid #ffffff;
   border-radius: 50%;
+  margin: 0 3.5px;
 }
 .feature-slider .swiper-button-prev {
   left: 26px;
@@ -330,6 +336,176 @@ h6 {
   border-radius: 4px;
   width: 30px;
   height: 8px;
+}
+
+.special-offer {
+  height: 462px;
+  max-width: 353px;
+  width: 100%;
+  display: block;
+  background-color: #fff;
+  border: 1px dashed #2271b3;
+  border-radius: 8px;
+  padding: 38px 30px;
+  color: #6a6a6a;
+}
+.special-offer .category {
+  font-size: 14px;
+  line-height: 17px;
+  margin-bottom: 7px;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.special-offer .offer-img {
+  position: relative;
+}
+.special-offer .offer-img img {
+  width: 100%;
+  height: 231px;
+  object-fit: cover;
+  margin-bottom: 14px;
+}
+.special-offer .offer-img .label {
+  position: absolute;
+  letter-spacing: 0.02em;
+  font-weight: 500;
+  font-size: 13px;
+  border: 1.5px solid #ffffff;
+  background-color: #ff9300;
+  top: 11px;
+  padding: 2px 7px;
+  color: #fff;
+}
+.special-offer .offer-img .label.new {
+  left: 11px;
+}
+.special-offer .offer-img .label.sale {
+  right: 11px;
+}
+.special-offer .author {
+  font-size: 12px;
+  line-height: 15px;
+  margin-bottom: 10px;
+}
+.special-offer .product-name {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 15px;
+  color: #2271b3;
+}
+.special-offer .price {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.special-offer .price span {
+  font-weight: 700;
+  font-size: 26px;
+  color: #2271b3;
+}
+.special-offer .price .discount {
+  padding-top: 12px;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.special-offer .price .discount s {
+  font-weight: 300;
+  font-size: 18px;
+  color: #b7b7b7;
+}
+.special-offer .price .discount .difference {
+  font-weight: 500;
+  font-size: 13px;
+  background: #f12b2b;
+  padding: 2px 8px;
+  position: relative;
+  border-radius: 2px;
+  color: #fff;
+}
+.special-offer .price .discount .difference:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  border-right: 6px solid #f12b2b;
+  left: -5px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.special-offer.top-offer {
+  background-color: #2271b3;
+  border: 1px dashed #ffffff;
+  color: #fff;
+}
+.special-offer.top-offer .price span {
+  color: #ff9300;
+}
+.special-offer.top-offer .price s {
+  color: #fff;
+}
+.special-offer.top-offer .price .difference {
+  background-color: #ff9300;
+}
+.special-offer.top-offer .price .difference:before {
+  border-right-color: #ff9300;
+}
+.special-offer.top-offer .product-name {
+  color: #fff;
+}
+
+.special-offers-holder {
+  margin: 40px 0 60px;
+  display: flex;
+  gap: 30px;
+}
+.special-offers-holder .top-offer-holder {
+  position: relative;
+  flex: 0 0 383px;
+}
+.special-offers-holder .top-offer-holder::after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 74%;
+  background-color: #fff;
+  right: 0;
+  top: 20%;
+}
+.special-offers-holder .special-offer-slider {
+  min-width: 0;
+}
+.special-offers-holder .special-offer-slider .head-title {
+  padding-left: 40px;
+}
+.special-offers-holder .special-offer-slider .swiper-button {
+  width: 44px;
+  height: 44px;
+  border: 1px solid #e5e5e5;
+  background: #f7f7f7;
+  border-radius: 50%;
+}
+.special-offers-holder .special-offer-slider .swiper-button.swiper-button-prev {
+  left: -10px;
+}
+.special-offers-holder .special-offer-slider .swiper-button.swiper-button-next {
+  right: -60px;
+}
+.special-offers-holder .slider-holder {
+  padding-left: 40px;
+  position: relative;
 }
 
 body {
@@ -354,6 +530,18 @@ body {
 .fluid-container {
   width: 100%;
   margin: 0 auto;
+}
+
+.white-bg {
+  background-color: #fff;
+}
+
+.head-title {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 48px;
+  color: #fff;
+  margin-bottom: 20px;
 }
 
 /*# sourceMappingURL=layout.css.map */

@@ -33,6 +33,7 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
+        border-radius: 8px;
       }
     }
     &:not(.main-grid) {
@@ -96,12 +97,17 @@
       }
     }
   }
+  .swiper-pagination {
+    padding: 5px 0;
+    bottom: 0;
+  }
   .swiper-button {
     width: 46.04px;
     height: 42.95px;
     background: $orange;
     border: 1px solid #ffffff;
     border-radius: 50%;
+    margin: 0 3.5px;
   }
   .swiper-button-prev {
     left: 26px;

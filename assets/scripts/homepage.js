@@ -20,3 +20,19 @@ const featureSliders = new Swiper('.feature-slider', {
     prevEl: '.swiper-button-prev',
   },
 })
+
+// slider for special-offers
+const specialOffers = new Swiper('.special-offers-slider', {
+  slidesPerView: 3,
+  // Optional parameters
+  speed: 500,
+  loop: true,
+
+  spaceBetween: 30,
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+})

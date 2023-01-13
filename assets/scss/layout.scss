@@ -7,6 +7,9 @@
 // main slider and grid on homepage
 @import './components/main-feature-products-hp.scss';
 
+// special offers homepage
+@import './components/special-offers-hp.scss';
+
 body {
   font-family: 'Inter', sans-serif;
   font-weight: 400;
@@ -29,4 +32,16 @@ body {
 .fluid-container {
   width: 100%;
   margin: 0 auto;
+}
+
+.white-bg {
+  background-color: #fff;
+}
+
+.head-title {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 48px;
+  color: #fff;
+  margin-bottom: 20px;
 }
