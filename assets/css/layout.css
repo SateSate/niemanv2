@@ -659,6 +659,98 @@ h6 {
   background: url("/assets/images/icons/star-filled.png") no-repeat center center/cover;
 }
 
+.categories {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 46px;
+  margin-bottom: 60px;
+}
+.categories .category {
+  background: #fff;
+  border: 1px dashed #2271b3;
+  border-radius: 8px;
+  position: relative;
+  padding: 50px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.categories .category .category-name {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 38px;
+  margin-bottom: 20px;
+  color: #2271b3;
+}
+.categories .category .img-holder {
+  width: 100%;
+  margin-bottom: 36px;
+}
+.categories .category .img-holder img {
+  width: 100%;
+  height: 270px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.categories .tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 50px;
+}
+.categories .tags .tag {
+  flex-grow: 1;
+  border: 1px dashed #2271b3;
+  border-radius: 4px;
+  font-size: 20px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.categories .btn-holder {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 20px;
+}
+.categories .btn-holder .btn {
+  flex: 1;
+}
+.categories .btn-holder .btn.orange {
+  background: #ff9300;
+}
+
+.also-interesting {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 46px;
+  margin-bottom: 60px;
+}
+.also-interesting .item {
+  padding: 50px 30px 30px;
+  background: #fff;
+  border-radius: 8px;
+  border: 1px dashed #2271b3;
+  transition: border 0.1s linear;
+}
+.also-interesting .item:hover {
+  border: 3px solid #2271b3;
+}
+.also-interesting .item .title {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 38px;
+  margin-bottom: 16px;
+  color: #2271b3;
+}
+.also-interesting .item img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
 body {
   font-family: "Inter", sans-serif;
   font-weight: 400;
@@ -735,6 +827,22 @@ h2 {
 }
 .white-bg-section ul .active {
   color: #2271b3;
+}
+
+.btn {
+  display: flex;
+  cursor: pointer;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 18px;
+  color: #fff;
+  background: #2271b3;
+  border: 0;
+  outline: none;
+  padding: 0 20px;
+  border-radius: 4px;
 }
 
 /*# sourceMappingURL=layout.css.map */

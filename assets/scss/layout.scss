@@ -16,6 +16,9 @@
 // product found in top 10
 @import './components/product-offer.scss';
 
+// categories section homepage
+@import './components/categories.scss';
+
 body {
   font-family: 'Inter', sans-serif;
   font-weight: 400;
@@ -92,4 +95,20 @@ h2 {
       color: $blue;
     }
   }
+}
+
+.btn {
+  display: flex;
+  cursor: pointer;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 18px;
+  color: #fff;
+  background: $blue;
+  border: 0;
+  outline: none;
+  padding: 0 20px;
+  border-radius: 4px;
 }
