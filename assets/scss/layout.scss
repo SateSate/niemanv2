@@ -1,0 +1,32 @@
+@import './helpers/reset.scss';
+@import './helpers/variables.scss';
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@import './components/header.scss';
+
+// main slider and grid on homepage
+@import './components/main-feature-products-hp.scss';
+
+body {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  color: $dark;
+  background-color: $bg;
+}
+
+.container {
+  max-width: 1920px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.content-container {
+  max-width: 1600px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.fluid-container {
+  width: 100%;
+  margin: 0 auto;
+}

@@ -1,0 +1,118 @@
+.top-nav {
+  height: 45px;
+  background-color: $blue;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  font-size: 14px;
+  line-height: 17px;
+  .top-nav-links {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    li {
+      border-right: 1px solid white;
+      padding-right: 10px;
+      &:last-child {
+        border-right: none;
+        padding-right: 0;
+      }
+    }
+  }
+}
+
+.top-nav-bg {
+  background-color: $blue;
+}
+
+.nav-bg {
+  background-color: #f7f7f7;
+}
+
+.mid-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+  .search-bar {
+    position: relative;
+    max-width: 600px;
+    width: 100%;
+    input {
+      width: 100%;
+      background-color: white;
+      border: 1px solid $blue;
+      border-radius: 12px;
+      height: 40px;
+      padding: 0 20px;
+      &::placeholder {
+        color: #b7b7b7;
+      }
+      &:focus {
+        outline: none;
+      }
+    }
+    button {
+      background-color: $blue;
+      border: none;
+      cursor: pointer;
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 40px;
+      width: 44px;
+      border-radius: 0px 8px 8px 0px;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img {
+        max-width: 20px;
+      }
+    }
+  }
+  .user-actions {
+    display: flex;
+    align-items: center;
+    gap: 26px;
+    font-weight: 500;
+    font-size: 13px;
+    color: $blue;
+    a {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+      img {
+        max-width: 30px;
+      }
+    }
+  }
+}
+
+.main-nav-bg {
+  border-width: 1px 0px;
+  border-style: dashed;
+  border-color: #2271b3;
+  background-color: white;
+  .main-nav-links {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    padding: 16px 0;
+    li {
+      font-weight: 700;
+      font-size: 16px;
+      color: $dark;
+      a {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        img {
+          padding-top: 6px;
+        }
+      }
+    }
+  }
+}
