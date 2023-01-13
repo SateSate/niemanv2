@@ -1,11 +1,13 @@
 // main slider feature
 const featureSliders = new Swiper('.feature-slider', {
+  // start with the second slide
+  initialSlide: 1,
   // Optional parameters
   direction: 'horizontal',
   loop: true,
-  speed: 1000,
+  speed: 500,
   autoplay: {
-    delay: 5000,
+    delay: 4000,
   },
   // If we need pagination
   pagination: {

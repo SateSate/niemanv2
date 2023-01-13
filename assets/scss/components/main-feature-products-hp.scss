@@ -9,6 +9,43 @@
     color: white;
     border-radius: 8px;
     background: linear-gradient(79.45deg, #2271b3 1.43%, #659fcf 98.34%);
+    position: relative;
+    .label {
+      height: 30px;
+      width: 260px;
+      background-color: $blue;
+      box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.25);
+      border-radius: 8px 0px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 14px;
+      text-transform: uppercase;
+    }
+    .grid-image {
+      width: 100%;
+      height: 100%;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    &:not(.main-grid) {
+      &::after {
+        content: '';
+        position: absolute;
+        right: 6px;
+        bottom: 10px;
+        background: url('/assets/images/icons/double-arrow-r.png') no-repeat;
+        width: 60px;
+        height: 40px;
+      }
+    }
   }
   .main-grid {
     grid-column: 1 / 3;
@@ -18,4 +55,71 @@
 
 .feature-slider {
   height: 420px;
+  .feature-product {
+    display: flex;
+    padding: 20px 82px;
+    height: 100%;
+    .feature-product-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding-bottom: 55px;
+      .feature-product-title {
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 44px;
+        margin-bottom: 70px;
+      }
+      .feature-product-price {
+        span {
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 17px;
+          margin-bottom: 3px;
+        }
+        .price {
+          font-weight: 700;
+          font-size: 56px;
+          line-height: 68px;
+        }
+      }
+    }
+    .feature-product-image {
+      max-width: 460px;
+      width: 100%;
+      position: relative;
+      left: -5%;
+      img {
+        width: 100%;
+        max-height: 350px;
+        object-fit: cover;
+      }
+    }
+  }
+  .swiper-button {
+    width: 46.04px;
+    height: 42.95px;
+    background: $orange;
+    border: 1px solid #ffffff;
+    border-radius: 50%;
+  }
+  .swiper-button-prev {
+    left: 26px;
+  }
+  .swiper-button-next {
+    right: 26px;
+  }
+  .swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+    background: $orange;
+    opacity: 1;
+    transition: all 0.5s;
+    border-radius: 50%;
+    &.swiper-pagination-bullet-active {
+      border-radius: 4px;
+      width: 30px;
+      height: 8px;
+    }
+  }
 }
