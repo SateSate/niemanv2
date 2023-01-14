@@ -52,19 +52,3 @@ const newsSlider = new Swiper('.news-slider', {
     prevEl: '.news-btn.swiper-button-prev',
   },
 })
-
-// top10 slider
-const top10Slider = new Swiper('.top-10', {
-  slidesPerView: 4,
-  // Optional parameters
-  speed: 500,
-  loop: true,
-
-  spaceBetween: 50,
-
-  // Navigation arrows
-  navigation: {
-    nextEl: '.top-10.swiper-button-next',
-    prevEl: '.top-10.swiper-button-prev',
-  },
-})

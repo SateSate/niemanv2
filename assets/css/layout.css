@@ -751,6 +751,92 @@ h6 {
   border-radius: 8px;
 }
 
+.equipment {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 50px;
+}
+.equipment .equipment-item {
+  height: 462px;
+  background: #ffffff;
+  border: 1px dashed #2271b3;
+  border-radius: 8px;
+  padding: 30px;
+  flex: 0 0 353px;
+}
+.equipment .equipment-item .cat {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+.equipment .equipment-item .img-holder {
+  margin-bottom: 14px;
+  position: relative;
+}
+.equipment .equipment-item .img-holder::after {
+  content: "";
+  position: absolute;
+  bottom: 13px;
+  right: 10px;
+  width: 60px;
+  height: 40px;
+  background: url("/assets/images/icons/double-arrow-r.png") no-repeat;
+}
+.equipment .equipment-item .img-holder img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+}
+.equipment .equipment-item .author {
+  font-size: 12px;
+  margin-bottom: 15px;
+}
+.equipment .equipment-item .equipment-name {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  color: #2271b3;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 15px;
+}
+.equipment .equipment-item .btn {
+  background: #fff;
+  border: 2px solid #ff9300;
+  color: #ff9300;
+}
+.equipment .equipment-item.cover {
+  transition: border 0.1s linear;
+  flex: 0 0 483px;
+}
+.equipment .equipment-item.cover:hover {
+  border: 3px solid #2271b3;
+}
+.equipment .equipment-item.cover .img-holder {
+  height: 100%;
+}
+.equipment .equipment-item.cover .img-holder.overlay {
+  position: relative;
+}
+.equipment .equipment-item.cover .img-holder.overlay::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #1977bb;
+  border-radius: 8px;
+  mix-blend-mode: multiply;
+}
+.equipment .equipment-item.cover .img-holder img {
+  border-radius: 8px;
+  height: 100%;
+}
+
 body {
   font-family: "Inter", sans-serif;
   font-weight: 400;
@@ -784,7 +870,7 @@ body {
   font-size: 48px;
   line-height: 48px;
   color: #fff;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 h2 {
@@ -843,6 +929,67 @@ h2 {
   outline: none;
   padding: 0 20px;
   border-radius: 4px;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.section-header a {
+  font-size: 18px;
+  color: #2271b3;
+}
+
+.banner {
+  position: relative;
+  min-height: 440px;
+  border-radius: 8px;
+  color: #fff;
+  margin-bottom: 70px;
+}
+.banner .banner-img {
+  width: 100%;
+  height: 100%;
+}
+.banner .banner-img::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #1977bb;
+  border-radius: 8px;
+  mix-blend-mode: multiply;
+}
+.banner .banner-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.banner .banner-text {
+  position: absolute;
+  bottom: 25px;
+  right: 25px;
+  text-align: right;
+  width: 60%;
+}
+.banner .banner-text.top-text {
+  top: 25px;
+  bottom: unset;
+}
+.banner .banner-text h3 {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 48px;
+}
+.banner .banner-text p {
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 26px;
+  margin-top: 16px;
 }
 
 /*# sourceMappingURL=layout.css.map */
