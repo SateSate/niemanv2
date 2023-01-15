@@ -126,6 +126,7 @@
   border-radius: 4px;
   height: auto;
   min-height: 200px;
+  transition: all 0.5s ease-in-out;
   .tab-header {
     border-bottom: 1px solid #b7b7b7;
     display: flex;
@@ -155,14 +156,14 @@
   .tab-container {
     height: 100%;
     .tab-content {
-      transition: all 0.2s ease-in-out;
       opacity: 0;
       height: auto;
-      max-height: 0px;
+      max-height: 0;
       overflow: hidden;
       font-weight: 300;
       font-size: 20px;
       &.active {
+        transition: all 0.3s ease-in-out;
         opacity: 1;
         height: auto;
         max-height: 5000px;
