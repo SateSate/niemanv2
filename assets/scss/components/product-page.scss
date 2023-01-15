@@ -15,6 +15,12 @@
 .thumb-product-slider {
   max-width: 548px;
   width: 100%;
+  .swiper-slide {
+    opacity: 0.5;
+    &.swiper-slide-thumb-active {
+      opacity: 1;
+    }
+  }
 
   img {
     width: 102px;

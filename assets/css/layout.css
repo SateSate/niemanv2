@@ -937,6 +937,12 @@ footer .logo-holder {
   max-width: 548px;
   width: 100%;
 }
+.thumb-product-slider .swiper-slide {
+  opacity: 0.5;
+}
+.thumb-product-slider .swiper-slide.swiper-slide-thumb-active {
+  opacity: 1;
+}
 .thumb-product-slider img {
   width: 102px;
   height: 102px;
