@@ -968,10 +968,12 @@ footer .logo-holder {
 }
 .product .btn-holder {
   display: flex;
+  flex-wrap: wrap;
   gap: 16px;
 }
 .product .btn-holder .btn {
   width: 200px;
+  border-radius: 8px;
 }
 .product .btn-holder .bookmark {
   border: 1px solid #e5e5e5;
@@ -983,6 +985,10 @@ footer .logo-holder {
   align-items: center;
   justify-content: center;
   cursor: pointer;
+}
+.product .btn-holder p {
+  flex: 0 0 100%;
+  margin: 0;
 }
 .product .category {
   font-weight: 700;
@@ -1029,6 +1035,143 @@ footer .logo-holder {
   height: 100%;
   object-fit: contain;
 }
+.product .rent {
+  display: flex;
+  border: 1px solid #e5e5e5;
+}
+.product .rent .rent-item {
+  border-right: 1px solid #e5e5e5;
+  height: 75px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  flex-grow: 1;
+}
+.product .rent .rent-item:last-child {
+  border-right: none;
+}
+.product .rent .rent-item span {
+  font-size: 12px;
+  line-height: 15px;
+  display: block;
+  margin-bottom: 4px;
+}
+.product .rent .rent-item span.price {
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 32px;
+  color: #2271b3;
+}
+.product .rating {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  gap: 13px;
+  color: #6a6a6a;
+}
+.product .rating .stars {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+.product .rating .stars span {
+  display: block;
+  height: 10.49px;
+  width: 10.49px;
+  background: url("/assets/images/icons/star.png") no-repeat center/cover;
+}
+.product .rating .stars span.active {
+  background: url("/assets/images/icons/star-b.png") no-repeat center center/cover;
+}
+.product .rating .reviews {
+  font-size: 14px;
+  color: #2271b3;
+  text-decoration: underline;
+}
+.product .rating-stock {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.product .rating-stock .stock {
+  padding-left: 16px;
+  border-left: 1px solid #e5e5e5;
+  font-weight: 700;
+  font-size: 16px;
+}
+.product .rating-stock .stock .green {
+  color: #47a432;
+}
+.product .rating-stock .stock .red {
+  color: #df4949;
+}
+.product .product-price {
+  margin-top: 15px;
+}
+.product .product-price .price {
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 30px;
+  color: #2271b3;
+}
+.product .product-price .net {
+  font-size: 12px;
+  line-height: 15px;
+}
+.product .product-price .net span {
+  color: #2271b3;
+}
+.product .product-price .shipping {
+  display: block;
+  font-size: 14px;
+  text-decoration: underline;
+}
+.product .input-qty {
+  text-align: center;
+  max-width: 130px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.product .input-qty input[type=number] {
+  width: 54px;
+  height: 48px;
+  border: 1px solid #b7b7b7;
+  text-align: center;
+  font-weight: 700;
+  font-size: 16px;
+  pointer-events: none;
+}
+.product .input-qty input[type=number]::-webkit-inner-spin-button,
+.product .input-qty input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.product .input-qty .value-button {
+  cursor: pointer;
+  width: 39px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 16px;
+}
+.product .input-qty .value-button.decrease {
+  background: #fff;
+  border: 1px solid #b7b7b7;
+  border-right: 0;
+  border-radius: 8px 0 0 8px;
+}
+.product .input-qty .value-button.increase {
+  background: #2271b3;
+  border-left: 0;
+  border: 1px solid #2271b3;
+  color: white;
+  border-radius: 0px 8px 8px 0px;
+}
 
 .seperator {
   background: #e5e5e5;
@@ -1044,7 +1187,7 @@ footer .logo-holder {
   border-radius: 4px;
   height: auto;
   min-height: 200px;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 .tab-holder .tab-header {
   border-bottom: 1px solid #b7b7b7;
@@ -1084,7 +1227,7 @@ footer .logo-holder {
   font-size: 20px;
 }
 .tab-holder .tab-container .tab-content.active {
-  transition: all 0.3s ease-in-out;
+  transition: all 0.2s ease-in-out;
   opacity: 1;
   height: auto;
   max-height: 5000px;

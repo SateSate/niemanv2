@@ -49,9 +49,11 @@
   }
   .btn-holder {
     display: flex;
+    flex-wrap: wrap;
     gap: 16px;
     .btn {
       width: 200px;
+      border-radius: 8px;
     }
     .bookmark {
       border: 1px solid #e5e5e5;
@@ -63,6 +65,10 @@
       align-items: center;
       justify-content: center;
       cursor: pointer;
+    }
+    p {
+      flex: 0 0 100%;
+      margin: 0;
     }
   }
   .category {
@@ -110,6 +116,145 @@
       }
     }
   }
+  .rent {
+    display: flex;
+    border: 1px solid #e5e5e5;
+    .rent-item {
+      border-right: 1px solid #e5e5e5;
+      height: 75px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      flex-grow: 1;
+      &:last-child {
+        border-right: none;
+      }
+      span {
+        font-size: 12px;
+        line-height: 15px;
+        display: block;
+        margin-bottom: 4px;
+        &.price {
+          font-weight: 700;
+          font-size: 26px;
+          line-height: 32px;
+          color: $blue;
+        }
+      }
+    }
+  }
+  .rating {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    gap: 13px;
+    color: $grey;
+    .stars {
+      display: flex;
+      align-items: center;
+      gap: 3px;
+      span {
+        display: block;
+        height: 10.49px;
+        width: 10.49px;
+        background: url('/assets/images/icons/star.png') no-repeat center /
+          cover;
+        &.active {
+          background: url('/assets/images/icons/star-b.png') no-repeat center
+            center / cover;
+        }
+      }
+    }
+    .reviews {
+      font-size: 14px;
+      color: $blue;
+      text-decoration: underline;
+    }
+  }
+  .rating-stock {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    .stock {
+      padding-left: 16px;
+      border-left: 1px solid #e5e5e5;
+      font-weight: 700;
+      font-size: 16px;
+      .green {
+        color: $succes;
+      }
+      .red {
+        color: $critical;
+      }
+    }
+  }
+  .product-price {
+    margin-top: 15px;
+    .price {
+      font-weight: 600;
+      font-size: 36px;
+      line-height: 30px;
+      color: $blue;
+    }
+    .net {
+      font-size: 12px;
+      line-height: 15px;
+      span {
+        color: $blue;
+      }
+    }
+    .shipping {
+      display: block;
+      font-size: 14px;
+      text-decoration: underline;
+    }
+  }
+  .input-qty {
+    text-align: center;
+    max-width: 130px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    input[type='number'] {
+      width: 54px;
+      height: 48px;
+      border: 1px solid $lgrey;
+      text-align: center;
+      font-weight: 700;
+      font-size: 16px;
+      pointer-events: none;
+    }
+    input[type='number']::-webkit-inner-spin-button,
+    input[type='number']::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+    .value-button {
+      cursor: pointer;
+      width: 39px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 16px;
+      &.decrease {
+        background: #fff;
+        border: 1px solid $lgrey;
+        border-right: 0;
+        border-radius: 8px 0 0 8px;
+      }
+      &.increase {
+        background: $blue;
+        border-left: 0;
+        border: 1px solid $blue;
+        color: white;
+        border-radius: 0px 8px 8px 0px;
+      }
+    }
+  }
 }
 
 .seperator {
@@ -126,7 +271,7 @@
   border-radius: 4px;
   height: auto;
   min-height: 200px;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.2s ease-in-out;
   .tab-header {
     border-bottom: 1px solid #b7b7b7;
     display: flex;
@@ -163,7 +308,7 @@
       font-weight: 300;
       font-size: 20px;
       &.active {
-        transition: all 0.3s ease-in-out;
+        transition: all 0.2s ease-in-out;
         opacity: 1;
         height: auto;
         max-height: 5000px;

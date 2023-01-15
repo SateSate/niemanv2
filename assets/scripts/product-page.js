@@ -55,9 +55,23 @@ function findActiveElementAndRemoveIt(elem) {
 
 initTab('.tab-holder')
 
-// get the width of the first tab and set it to the table tr td:first-child
-// const firstTab = document.querySelector('.tab-holder .tab')
-// const firstTabWidth = firstTab.offsetWidth
+function increaseValue() {
+  let value = parseInt(document.getElementById('number').value, 10)
+  value = isNaN(value) ? 0 : value
+  value++
+  document.getElementById('number').value = value
+}
 
-// const tableFirstTd = document.querySelector('.tab-holder table td:first-child')
-// tableFirstTd.style.width = firstTabWidth + 'px'
+function decreaseValue() {
+  let value = parseInt(document.getElementById('number').value, 10)
+  value = isNaN(value) ? 0 : value
+  value < 1 ? (value = 1) : ''
+  value--
+  document.getElementById('number').value = value
+}
+
+const decrease = document.getElementById('decrease')
+const increase = document.getElementById('increase')
+
+increase.addEventListener('click', increaseValue)
+decrease.addEventListener('click', decreaseValue)
