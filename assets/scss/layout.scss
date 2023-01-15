@@ -25,6 +25,9 @@
 // machinery page categories
 @import './components/product-page.scss';
 
+// about us page
+@import './components/about-us.scss';
+
 body {
   font-family: 'Inter', sans-serif;
   font-weight: 400;
@@ -126,6 +129,12 @@ h2 {
     background: #fff;
     border: 2px solid $orange;
     color: $orange;
+  }
+  &.btn-newsletter {
+    background: $orange;
+    margin-top: 30px;
+    max-width: max-content;
+    margin-left: auto;
   }
 }
 
@@ -242,6 +251,9 @@ h2 {
       font-size: 24px;
       color: $blue;
     }
+  }
+  &.about-us-box {
+    padding: 60px 120px;
   }
 }
 
