@@ -120,6 +120,7 @@ h2 {
   outline: none;
   padding: 0 20px;
   border-radius: 4px;
+  min-width: 199px;
   &.reverse {
     background: #fff;
     border: 2px solid $orange;
