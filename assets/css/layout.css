@@ -744,22 +744,6 @@ footer .logo-holder {
   object-fit: cover;
   border-radius: 8px;
 }
-.categories .tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-bottom: 50px;
-}
-.categories .tags .tag {
-  flex-grow: 1;
-  border: 1px dashed #2271b3;
-  border-radius: 4px;
-  font-size: 20px;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 .categories .btn-holder {
   display: flex;
   align-items: center;
@@ -769,9 +753,6 @@ footer .logo-holder {
 }
 .categories .btn-holder .btn {
   flex: 1;
-}
-.categories .btn-holder .btn.orange {
-  background: #ff9300;
 }
 
 .also-interesting {
@@ -801,6 +782,25 @@ footer .logo-holder {
   width: 100%;
   object-fit: cover;
   border-radius: 8px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 50px;
+}
+.tags .tag {
+  flex-grow: 1;
+  border: 1px dashed #2271b3;
+  border-radius: 4px;
+  font-size: 20px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+  white-space: nowrap;
 }
 
 .equipment {
@@ -1396,6 +1396,7 @@ footer .logo-holder {
 }
 .about-info .about-img {
   height: 440px;
+  position: relative;
 }
 .about-info .about-img img {
   width: 100%;
@@ -1404,6 +1405,10 @@ footer .logo-holder {
 }
 .about-info .about-img.newsletter {
   height: 272px;
+}
+.about-info .about-img iframe {
+  width: 100%;
+  height: 100%;
 }
 
 .contact-here {
@@ -1423,6 +1428,7 @@ footer .logo-holder {
 .contact-here p {
   font-size: 24px;
   line-height: 30px;
+  padding-left: 0;
 }
 .contact-here p span {
   font-size: 26px;
@@ -1433,6 +1439,35 @@ footer .logo-holder {
 .contact-here .btn {
   border: 1px solid #fff;
   font-size: 16px;
+}
+
+.video-holder {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.video-holder video {
+  width: 100%;
+  height: 100%;
+}
+.video-holder .play-button-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 125px;
+  height: 125px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.video-holder .play-button-wrapper.hide {
+  display: none;
+}
+.video-holder .play-button-wrapper img {
+  width: 100%;
+  height: 100%;
 }
 
 body {
@@ -1543,6 +1578,9 @@ h2 {
   margin-top: 30px;
   max-width: max-content;
   margin-left: auto;
+}
+.btn.orange {
+  background: #ff9300;
 }
 
 .section-header {

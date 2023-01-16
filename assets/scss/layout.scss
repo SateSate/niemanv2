@@ -136,6 +136,9 @@ h2 {
     max-width: max-content;
     margin-left: auto;
   }
+  &.orange {
+    background: $orange;
+  }
 }
 
 .section-header {
