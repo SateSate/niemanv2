@@ -1387,19 +1387,18 @@ footer .logo-holder {
 }
 
 .about-info {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-.about-info div {
-  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
 }
 .about-info .about-img {
   height: 440px;
   position: relative;
+  min-width: 0;
 }
 .about-info .about-img img {
   width: 100%;
+  height: 100%;
   object-fit: cover;
   border-radius: 4px;
 }
@@ -1409,6 +1408,32 @@ footer .logo-holder {
 .about-info .about-img iframe {
   width: 100%;
   height: 100%;
+}
+.about-info .about-slider-holder {
+  height: 440px;
+  position: relative;
+  min-width: 0;
+}
+.about-info .about-slider-holder .main-about-slider {
+  width: 100%;
+  height: 286px;
+  margin-bottom: 10px;
+}
+.about-info .about-slider-holder .main-about-slider img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.about-info .about-slider-holder .thumb-about-slider {
+  width: 100%;
+  height: 133px;
+}
+.about-info .about-slider-holder .thumb-about-slider img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
 }
 
 .contact-here {
@@ -1461,6 +1486,7 @@ footer .logo-holder {
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  z-index: 3;
 }
 .video-holder .play-button-wrapper.hide {
   display: none;
@@ -1468,6 +1494,41 @@ footer .logo-holder {
 .video-holder .play-button-wrapper img {
   width: 100%;
   height: 100%;
+}
+
+.about-boxes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 46px;
+  margin-bottom: 40px;
+}
+.about-boxes .box {
+  background: #fff;
+  border-radius: 8px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px dashed #2271b3;
+}
+.about-boxes .box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 13px;
+}
+.about-boxes .box .box-title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  color: #2271b3;
+  margin-bottom: 20px;
+}
+.about-boxes .box .cat {
+  font-size: 14px;
+  line-height: 17px;
+  color: #6a6a6a;
 }
 
 body {
