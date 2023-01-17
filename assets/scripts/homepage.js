@@ -58,10 +58,14 @@ const navLinks = document.querySelectorAll('.nav-link')
 navLinks.forEach((link) => {
   const dropdown = link.querySelector('.dropdown')
   link.addEventListener('mouseenter', () => {
-    dropdown.classList.add('active')
+    if (dropdown) {
+      dropdown.classList.add('active')
+    }
   })
   link.addEventListener('mouseleave', () => {
-    dropdown.classList.remove('active')
+    if (dropdown) {
+      dropdown.classList.remove('active')
+    }
   })
 })
 
@@ -69,9 +73,19 @@ const dropDownLinks = document.querySelectorAll('.dropdown-link')
 dropDownLinks.forEach((link) => {
   const dropdown = link.querySelector('.dropdown-sub')
   link.addEventListener('mouseenter', () => {
-    dropdown.classList.add('active')
+    // if dropdown exists, add active class
+    if (dropdown) {
+      dropdown.classList.add('active')
+    }
   })
   link.addEventListener('mouseleave', () => {
-    dropdown.classList.remove('active')
+    // if dropdown exists, remove active class
+    if (dropdown) {
+      dropdown.classList.remove('active')
+    }
   })
+})
+
+AOS.init({
+  duration: 1000,
 })
