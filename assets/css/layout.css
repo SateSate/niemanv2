@@ -195,22 +195,274 @@ h6 {
   display: flex;
   align-items: center;
   gap: 50px;
-  padding: 16px 0;
 }
 .main-nav-bg .main-nav-links li {
   font-weight: 700;
   font-size: 16px;
   color: #1d1d1d;
+  position: relative;
+  transition: all 0.6s ease-in-out;
+}
+.main-nav-bg .main-nav-links li:hover {
+  background-color: #2271b3;
+}
+.main-nav-bg .main-nav-links li:hover a {
+  color: white;
+}
+.main-nav-bg .main-nav-links li:hover svg path {
+  fill: #fff;
 }
 .main-nav-bg .main-nav-links li a {
   display: flex;
   align-items: center;
   gap: 6px;
+  padding: 16px 10px;
 }
-.main-nav-bg .main-nav-links li a img {
-  padding-top: 6px;
+.main-nav-bg .main-nav-links li a svg {
+  margin-top: 5px;
+}
+.main-nav-bg .main-nav-links li .dropdown {
+  position: absolute;
+  width: 232px;
+  top: 56px;
+  left: 0;
+  background-color: #2271b3;
+  z-index: 9;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+.main-nav-bg .main-nav-links li .dropdown li {
+  opacity: 0;
+  font-weight: 500;
+}
+.main-nav-bg .main-nav-links li .dropdown.active {
+  overflow: visible;
+  max-height: 1000px;
+  opacity: 1;
+  transition: all 0.3s ease-in-out;
+}
+.main-nav-bg .main-nav-links li .dropdown.active li {
+  opacity: 0;
+}
+.main-nav-bg .main-nav-links li .dropdown.active li:nth-child(1) {
+  animation: fadeInUp 0.3s ease-in-out forwards;
+  animation-delay: 0.05s;
+}
+.main-nav-bg .main-nav-links li .dropdown.active li:nth-child(2) {
+  animation: fadeInUp 0.3s ease-in-out forwards;
+  animation-delay: 0.1s;
+}
+.main-nav-bg .main-nav-links li .dropdown.active li:nth-child(3) {
+  animation: fadeInUp 0.3s ease-in-out forwards;
+  animation-delay: 0.15s;
+}
+.main-nav-bg .main-nav-links li .dropdown.active li:nth-child(4) {
+  animation: fadeInUp 0.3s ease-in-out forwards;
+  animation-delay: 0.2s;
+}
+.main-nav-bg .main-nav-links li .dropdown.active li:nth-child(5) {
+  animation: fadeInUp 0.3s ease-in-out forwards;
+  animation-delay: 0.25s;
+}
+.main-nav-bg .main-nav-links li .dropdown.active li:nth-child(6) {
+  animation: fadeInUp 0.3s ease-in-out forwards;
+  animation-delay: 0.3s;
+}
+.main-nav-bg .main-nav-links li .dropdown.active li:nth-child(7) {
+  animation: fadeInUp 0.3s ease-in-out forwards;
+  animation-delay: 0.35s;
+}
+.main-nav-bg .main-nav-links li .dropdown.active li:nth-child(8) {
+  animation: fadeInUp 0.3s ease-in-out forwards;
+  animation-delay: 0.4s;
+}
+.main-nav-bg .main-nav-links li .dropdown.active li:nth-child(9) {
+  animation: fadeInUp 0.3s ease-in-out forwards;
+  animation-delay: 0.45s;
+}
+.main-nav-bg .main-nav-links li .dropdown.active li:nth-child(10) {
+  animation: fadeInUp 0.3s ease-in-out forwards;
+  animation-delay: 0.5s;
+}
+.main-nav-bg .main-nav-links li .dropdown.active li:nth-child(11) {
+  animation: fadeInUp 0.3s ease-in-out forwards;
+  animation-delay: 0.55s;
+}
+.main-nav-bg .main-nav-links li .dropdown.active li:nth-child(12) {
+  animation: fadeInUp 0.3s ease-in-out forwards;
+  animation-delay: 0.6s;
+}
+.main-nav-bg .main-nav-links li .dropdown.active li:nth-child(13) {
+  animation: fadeInUp 0.3s ease-in-out forwards;
+  animation-delay: 0.65s;
+}
+.main-nav-bg .main-nav-links li .dropdown.active li:nth-child(14) {
+  animation: fadeInUp 0.3s ease-in-out forwards;
+  animation-delay: 0.7s;
+}
+.main-nav-bg .main-nav-links li .dropdown.active li:nth-child(15) {
+  animation: fadeInUp 0.3s ease-in-out forwards;
+  animation-delay: 0.75s;
+}
+.main-nav-bg .main-nav-links li .dropdown.active li:nth-child(16) {
+  animation: fadeInUp 0.3s ease-in-out forwards;
+  animation-delay: 0.8s;
+}
+.main-nav-bg .main-nav-links li .dropdown.active li:nth-child(17) {
+  animation: fadeInUp 0.3s ease-in-out forwards;
+  animation-delay: 0.85s;
+}
+.main-nav-bg .main-nav-links li .dropdown.active li:nth-child(18) {
+  animation: fadeInUp 0.3s ease-in-out forwards;
+  animation-delay: 0.9s;
+}
+.main-nav-bg .main-nav-links li .dropdown.active li:nth-child(19) {
+  animation: fadeInUp 0.3s ease-in-out forwards;
+  animation-delay: 0.95s;
+}
+.main-nav-bg .main-nav-links li .dropdown.active li:nth-child(20) {
+  animation: fadeInUp 0.3s ease-in-out forwards;
+  animation-delay: 1s;
+}
+.main-nav-bg .main-nav-links li .dropdown a {
+  color: #fff;
+  font-size: 18px;
+  line-height: 28px;
+  padding: 0;
+  padding: 10px;
+  transition: all 0.2s ease-in-out;
+}
+.main-nav-bg .main-nav-links li .dropdown a:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+.main-nav-bg .main-nav-links li .dropdown a:hover svg path {
+  fill: #fff;
+}
+.main-nav-bg .dropdown-sub {
+  right: -232px;
+  width: 232px;
+  background-color: #2271b3;
+  position: absolute;
+  top: 0;
+  z-index: 10;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  border-left: 1px solid rgba(255, 255, 255, 0.35);
+  pointer-events: none;
+}
+.main-nav-bg .dropdown-sub.active {
+  overflow: visible;
+  opacity: 1;
+  transition: all 0.3s ease-in-out;
+  z-index: 12;
+  pointer-events: all;
+}
+.main-nav-bg .dropdown-sub.active li {
+  opacity: 0;
+}
+.main-nav-bg .dropdown-sub.active li:nth-child(1) {
+  animation: fadeInUp 0.3s ease-in-out forwards;
+  animation-delay: 0.05s;
+}
+.main-nav-bg .dropdown-sub.active li:nth-child(2) {
+  animation: fadeInUp 0.3s ease-in-out forwards;
+  animation-delay: 0.1s;
+}
+.main-nav-bg .dropdown-sub.active li:nth-child(3) {
+  animation: fadeInUp 0.3s ease-in-out forwards;
+  animation-delay: 0.15s;
+}
+.main-nav-bg .dropdown-sub.active li:nth-child(4) {
+  animation: fadeInUp 0.3s ease-in-out forwards;
+  animation-delay: 0.2s;
+}
+.main-nav-bg .dropdown-sub.active li:nth-child(5) {
+  animation: fadeInUp 0.3s ease-in-out forwards;
+  animation-delay: 0.25s;
+}
+.main-nav-bg .dropdown-sub.active li:nth-child(6) {
+  animation: fadeInUp 0.3s ease-in-out forwards;
+  animation-delay: 0.3s;
+}
+.main-nav-bg .dropdown-sub.active li:nth-child(7) {
+  animation: fadeInUp 0.3s ease-in-out forwards;
+  animation-delay: 0.35s;
+}
+.main-nav-bg .dropdown-sub.active li:nth-child(8) {
+  animation: fadeInUp 0.3s ease-in-out forwards;
+  animation-delay: 0.4s;
+}
+.main-nav-bg .dropdown-sub.active li:nth-child(9) {
+  animation: fadeInUp 0.3s ease-in-out forwards;
+  animation-delay: 0.45s;
+}
+.main-nav-bg .dropdown-sub.active li:nth-child(10) {
+  animation: fadeInUp 0.3s ease-in-out forwards;
+  animation-delay: 0.5s;
+}
+.main-nav-bg .dropdown-sub.active li:nth-child(11) {
+  animation: fadeInUp 0.3s ease-in-out forwards;
+  animation-delay: 0.55s;
+}
+.main-nav-bg .dropdown-sub.active li:nth-child(12) {
+  animation: fadeInUp 0.3s ease-in-out forwards;
+  animation-delay: 0.6s;
+}
+.main-nav-bg .dropdown-sub.active li:nth-child(13) {
+  animation: fadeInUp 0.3s ease-in-out forwards;
+  animation-delay: 0.65s;
+}
+.main-nav-bg .dropdown-sub.active li:nth-child(14) {
+  animation: fadeInUp 0.3s ease-in-out forwards;
+  animation-delay: 0.7s;
+}
+.main-nav-bg .dropdown-sub.active li:nth-child(15) {
+  animation: fadeInUp 0.3s ease-in-out forwards;
+  animation-delay: 0.75s;
+}
+.main-nav-bg .dropdown-sub.active li:nth-child(16) {
+  animation: fadeInUp 0.3s ease-in-out forwards;
+  animation-delay: 0.8s;
+}
+.main-nav-bg .dropdown-sub.active li:nth-child(17) {
+  animation: fadeInUp 0.3s ease-in-out forwards;
+  animation-delay: 0.85s;
+}
+.main-nav-bg .dropdown-sub.active li:nth-child(18) {
+  animation: fadeInUp 0.3s ease-in-out forwards;
+  animation-delay: 0.9s;
+}
+.main-nav-bg .dropdown-sub.active li:nth-child(19) {
+  animation: fadeInUp 0.3s ease-in-out forwards;
+  animation-delay: 0.95s;
+}
+.main-nav-bg .dropdown-sub.active li:nth-child(20) {
+  animation: fadeInUp 0.3s ease-in-out forwards;
+  animation-delay: 1s;
+}
+.main-nav-bg .dropdown-sub li {
+  color: #fff;
+  font-size: 18px;
+  line-height: 28px;
+  padding: 0;
+  transition: all 0.2s ease-in-out;
+}
+.main-nav-bg .dropdown-sub li:hover {
+  background-color: rgba(255, 255, 255, 0.15);
 }
 
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
 footer {
   background-color: #2271b3;
   padding: 30px 0 60px;
@@ -1780,6 +2032,102 @@ h2 {
   text-align: center;
   margin-top: 50px;
   color: #2271b3;
+}
+
+@keyframes slide-in-left {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes slide-out-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@keyframes slide-in-right {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes slide-out-right {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+@keyframes slide-in-top {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes slide-out-top {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+@keyframes slide-in-bottom {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes slide-out-bottom {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+.slide-in-left {
+  animation: slide-in-left 0.5s ease-out;
+}
+
+.slide-out-left {
+  animation: slide-out-left 0.5s ease-out;
+}
+
+.slide-in-right {
+  animation: slide-in-right 0.5s ease-out;
+}
+
+.slide-out-right {
+  animation: slide-out-right 0.5s ease-out;
+}
+
+.slide-in-top {
+  animation: slide-in-top 0.5s ease-out;
+}
+
+.slide-out-top {
+  animation: slide-out-top 0.5s ease-out;
+}
+
+.slide-in-bottom {
+  animation: slide-in-bottom 0.5s ease-out;
+}
+
+.slide-out-bottom {
+  animation: slide-out-bottom 0.5s ease-out;
 }
 
 /*# sourceMappingURL=layout.css.map */

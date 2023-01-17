@@ -52,3 +52,26 @@ const newsSlider = new Swiper('.news-slider', {
     prevEl: '.news-btn.swiper-button-prev',
   },
 })
+
+// foreach nav link on hover, add active class to dropdown child
+const navLinks = document.querySelectorAll('.nav-link')
+navLinks.forEach((link) => {
+  const dropdown = link.querySelector('.dropdown')
+  link.addEventListener('mouseenter', () => {
+    dropdown.classList.add('active')
+  })
+  link.addEventListener('mouseleave', () => {
+    dropdown.classList.remove('active')
+  })
+})
+
+const dropDownLinks = document.querySelectorAll('.dropdown-link')
+dropDownLinks.forEach((link) => {
+  const dropdown = link.querySelector('.dropdown-sub')
+  link.addEventListener('mouseenter', () => {
+    dropdown.classList.add('active')
+  })
+  link.addEventListener('mouseleave', () => {
+    dropdown.classList.remove('active')
+  })
+})
