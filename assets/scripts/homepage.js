@@ -89,3 +89,12 @@ dropDownLinks.forEach((link) => {
 AOS.init({
   duration: 1000,
 })
+
+var elem = document.querySelector('.categories')
+var iso = new Isotope(elem, {
+  // options
+  itemSelector: '.category',
+  masonry: {
+    gutter: 46,
+  },
+})
