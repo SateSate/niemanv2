@@ -55,6 +55,8 @@ body {
 
 .white-bg {
   background-color: #fff;
+  border-top: 1px dashed $blue;
+  border-bottom: 1px dashed $blue;
 }
 
 .head-title {
@@ -74,8 +76,14 @@ h2 {
 
 .white-bg-section {
   padding: 40px 80px;
-  margin-bottom: 60px;
   position: relative;
+  background-color: #fff;
+  &.dotted {
+    padding: 23px 50px 50px;
+    border-radius: 8px;
+    border: 1px dashed $blue;
+    margin-bottom: 60px;
+  }
   .header {
     display: flex;
     align-items: center;
@@ -129,6 +137,7 @@ h2 {
     background: #fff;
     border: 2px solid $orange;
     color: $orange;
+    min-width: auto;
   }
   &.btn-newsletter {
     background: $orange;
@@ -236,6 +245,10 @@ h2 {
 .spacer {
   margin: 30px 0;
   height: 1px;
+}
+
+.space-60 {
+  margin: 60px 0;
 }
 
 .white-box-dotted {
