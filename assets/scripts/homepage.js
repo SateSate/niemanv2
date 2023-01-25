@@ -6,9 +6,9 @@ const featureSliders = new Swiper('.feature-slider', {
   direction: 'horizontal',
   loop: true,
   speed: 500,
-  autoplay: {
-    delay: 4000,
-  },
+  // autoplay: {
+  //   delay: 4000,
+  // },
   // If we need pagination
   pagination: {
     el: '.swiper-pagination',
@@ -51,39 +51,6 @@ const newsSlider = new Swiper('.news-slider', {
     nextEl: '.news-btn.swiper-button-next',
     prevEl: '.news-btn.swiper-button-prev',
   },
-})
-
-// foreach nav link on hover, add active class to dropdown child
-const navLinks = document.querySelectorAll('.nav-link')
-navLinks.forEach((link) => {
-  const dropdown = link.querySelector('.dropdown')
-  link.addEventListener('mouseenter', () => {
-    if (dropdown) {
-      dropdown.classList.add('active')
-    }
-  })
-  link.addEventListener('mouseleave', () => {
-    if (dropdown) {
-      dropdown.classList.remove('active')
-    }
-  })
-})
-
-const dropDownLinks = document.querySelectorAll('.dropdown-link')
-dropDownLinks.forEach((link) => {
-  const dropdown = link.querySelector('.dropdown-sub')
-  link.addEventListener('mouseenter', () => {
-    // if dropdown exists, add active class
-    if (dropdown) {
-      dropdown.classList.add('active')
-    }
-  })
-  link.addEventListener('mouseleave', () => {
-    // if dropdown exists, remove active class
-    if (dropdown) {
-      dropdown.classList.remove('active')
-    }
-  })
 })
 
 AOS.init({
