@@ -1,14 +1,17 @@
 .special-offer {
-  height: 462px;
+  // height: 462px;
   max-width: 353px;
   width: 100%;
   display: block;
   background-color: #fff;
   border: 1px dashed $blue;
   border-radius: 8px;
-  padding: 38px 30px;
+  padding: 30px;
   color: $grey;
   margin: 0 auto;
+  @media screen and (max-width: 991px) {
+    margin: 0;
+  }
   .category {
     font-size: 14px;
     line-height: 17px;
@@ -67,11 +70,17 @@
   .price {
     display: flex;
     align-items: center;
-    gap: 16px;
+    @media screen and (max-width: 1530px) {
+      flex-wrap: wrap;
+    }
     span {
       font-weight: 700;
       font-size: 26px;
       color: $blue;
+      margin-right: 16px;
+      @media screen and (max-width: 1530px) {
+        font-size: 22px;
+      }
       .tag {
         display: block;
         font-weight: 400;
@@ -90,6 +99,9 @@
         font-size: 18px;
         color: $lgrey;
         padding-top: 12px;
+        @media screen and (max-width: 1530px) {
+          font-size: 15px;
+        }
       }
       .difference {
         font-weight: 500;
@@ -100,6 +112,10 @@
         border-radius: 4px;
         color: #fff;
         margin-top: 12px;
+        white-space: nowrap;
+        @media screen and (max-width: 1530px) {
+          font-size: 12px;
+        }
 
         &:before {
           content: '';
@@ -120,6 +136,9 @@
     background-color: $blue;
     border: 1px dashed #ffffff;
     color: #fff;
+    @media screen and (max-width: 830px) {
+      margin: 0 auto;
+    }
     .price {
       span {
         color: $orange;
@@ -147,9 +166,30 @@
   margin: 40px 0 60px;
   display: flex;
   gap: 30px;
+  @media screen and (max-width: 1490px) {
+    gap: 20px;
+  }
+  @media screen and (max-width: 991px) {
+    margin: 20px 0 30px;
+  }
+  @media screen and (max-width: 830px) {
+    flex-direction: column;
+  }
   .top-offer-holder {
     position: relative;
     flex: 0 0 383px;
+    @media screen and (max-width: 1490px) {
+      flex: 0 0 23%;
+    }
+    @media (min-width: 1140px) and (max-width: 1190px) {
+      flex: 0 0 383px;
+    }
+    @media (min-width: 992px) and (max-width: 1139px) {
+      flex: 0 0 30%;
+    }
+    @media screen and (max-width: 991px) {
+      flex: 0 0 40%;
+    }
     &::after {
       // side separator
       content: '';
@@ -159,12 +199,18 @@
       background-color: #fff;
       right: 0;
       top: 20%;
+      @media screen and (max-width: 1490px) {
+        display: none;
+      }
     }
   }
   .special-offer-slider {
     min-width: 0;
     .head-title {
       padding-left: 50px;
+      @media screen and (max-width: 991px) {
+        padding-left: 0;
+      }
     }
     .swiper-button {
       width: 44px;
@@ -174,17 +220,29 @@
       border-radius: 50%;
       &.swiper-button-prev {
         left: -10px;
+        @media screen and (max-width: 991px) {
+          left: 3px;
+        }
       }
       &.swiper-button-next {
         right: -60px;
+        @media screen and (max-width: 1730px) {
+          right: 3px;
+        }
       }
     }
     .special-offer {
       margin-left: auto;
+      @media screen and (max-width: 991px) {
+        margin: 0 auto;
+      }
     }
   }
   .slider-holder {
     padding-left: 40px;
     position: relative;
+    @media screen and (max-width: 991px) {
+      padding-left: 0;
+    }
   }
 }

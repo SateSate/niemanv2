@@ -1,16 +1,30 @@
 // product slider
 const productSlider = new Swiper('.product-slider', {
-  slidesPerView: 4,
+  slidesPerView: 1,
   // Optional parameters
   speed: 500,
   loop: true,
 
-  spaceBetween: 50,
+  spaceBetween: 10,
 
   // Navigation arrows
   navigation: {
     nextEl: '.product-slider-nav.swiper-button-next',
     prevEl: '.product-slider-nav.swiper-button-prev',
+  },
+  breakpoints: {
+    680: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    991: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+    },
+    1270: {
+      slidesPerView: 4,
+      spaceBetween: 50,
+    },
   },
 })
 

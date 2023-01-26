@@ -23,7 +23,7 @@ const featureSliders = new Swiper('.feature-slider', {
 
 // slider for special-offers
 const specialOffers = new Swiper('.special-offers-slider', {
-  slidesPerView: 3,
+  slidesPerView: 1,
   // Optional parameters
   speed: 500,
   loop: true,
@@ -35,21 +35,42 @@ const specialOffers = new Swiper('.special-offers-slider', {
     nextEl: '.offers-btn.swiper-button-next',
     prevEl: '.offers-btn.swiper-button-prev',
   },
+  breakpoints: {
+    991: {
+      slidesPerView: 2,
+    },
+    1190: {
+      slidesPerView: 3,
+    },
+  },
 })
 
 // news slider
 const newsSlider = new Swiper('.news-slider', {
-  slidesPerView: 4,
+  slidesPerView: 1,
   // Optional parameters
   speed: 500,
   loop: true,
-
-  spaceBetween: 50,
+  spaceBetween: 10,
 
   // Navigation arrows
   navigation: {
     nextEl: '.news-btn.swiper-button-next',
     prevEl: '.news-btn.swiper-button-prev',
+  },
+  breakpoints: {
+    680: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    991: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+    },
+    1270: {
+      slidesPerView: 4,
+      spaceBetween: 50,
+    },
   },
 })
 

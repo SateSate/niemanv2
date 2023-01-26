@@ -66,6 +66,21 @@ body {
   line-height: 48px;
   color: #fff;
   margin-bottom: 30px;
+  @media screen and (max-width: 1490px) {
+    font-size: 36px;
+    line-height: 36px;
+  }
+  @media screen and (max-width: 1170px) {
+    font-size: 26px;
+    line-height: 26px;
+  }
+  @media screen and (max-width: 992px) {
+    min-height: 52px;
+    margin-bottom: 20px;
+  }
+  @media screen and (max-width: 830px) {
+    min-height: auto;
+  }
 }
 
 h2 {
@@ -73,26 +88,46 @@ h2 {
   font-size: 32px;
   line-height: 38px;
   color: $blue;
+  @media screen and (max-width: 992px) {
+    font-size: 22px;
+    line-height: 28px;
+  }
 }
 
 .white-bg-section {
   padding: 40px 80px;
   position: relative;
   background-color: #fff;
+  @media screen and (max-width: 991px) {
+    padding: 20px 0;
+  }
   &.dotted {
     padding: 23px 50px 50px;
     border-radius: 8px;
     border: 1px dashed $blue;
     margin-bottom: 60px;
+    @media screen and (max-width: 991px) {
+      padding: 15px 20px 30px;
+    }
   }
   .header {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 23px;
+    gap: 10px;
+    @media screen and (max-width: 991px) {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 15px;
+    }
     a {
       font-weight: 400;
       font-size: 18px;
+      @media screen and (max-width: 1570px) {
+        font-size: 14px;
+      }
     }
   }
   .swiper-button {
@@ -102,14 +137,28 @@ h2 {
     border: 1px solid #e5e5e5;
     border-radius: 50%;
   }
+  .swiper-button-prev {
+    @media screen and (max-width: 1730px) {
+      left: 0;
+    }
+  }
+  .swiper-button-next {
+    @media screen and (max-width: 1730px) {
+      right: 0;
+    }
+  }
 }
 
 .filter-items {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 20px;
   font-weight: 500;
   font-size: 18px;
+  @media screen and (max-width: 991px) {
+    gap: 10px;
+  }
   .all {
     border-right: 1px solid $blue;
     padding-right: 20px;
