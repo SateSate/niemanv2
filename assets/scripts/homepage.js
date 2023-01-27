@@ -82,7 +82,10 @@ var elem = document.querySelector('.categories')
 var iso = new Isotope(elem, {
   // options
   itemSelector: '.category',
+  layoutMode: 'masonry',
+  percentPosition: true,
   masonry: {
-    gutter: 46,
+    gutter: '.gutter-sizer',
+    columnWidth: '.grid-sizer',
   },
 })

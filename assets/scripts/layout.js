@@ -109,3 +109,15 @@ function navLinksAction() {
 
 navLinksAction()
 window.addEventListener('resize', navLinksAction)
+
+// on document ready fade out the preloader without using jquery
+document.addEventListener('DOMContentLoaded', async function () {
+  const loader = document.querySelector('.loader')
+  await setTimeout(() => {
+    loader.classList.add('loaded')
+  }, 300)
+
+  await setTimeout(() => {
+    loader.classList.add('d-none')
+  }, 1000)
+})

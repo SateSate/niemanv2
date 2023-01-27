@@ -10,6 +10,12 @@
     <link rel="stylesheet" href="../assets/css/layout.css" />
   </head>
   <body>
+    <!-- loader -->
+    <div class="loader">
+      <div class="loader-inner">
+        <img src="../assets/images/loader.gif" alt="" />
+      </div>
+    </div>
     <header>
       <div class="fluid-container">
         <div class="top-nav-bg">
@@ -672,7 +678,7 @@
             <div class="swiper product-slider">
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                  <div class="product-holder">
+                  <a href="javascript:void(0)" class="product-holder">
                     <div class="img-holder">
                       <img src="../assets/images/makita.png" alt="" />
                     </div>
@@ -697,10 +703,10 @@
                         <div class="difference">- 260,59 €</div>
                       </div>
                     </div>
-                  </div>
+                  </a>
                 </div>
                 <div class="swiper-slide">
-                  <div class="product-holder">
+                  <a href="javascript:void(0)" class="product-holder">
                     <div class="img-holder">
                       <img src="../assets/images/makita.png" alt="" />
                       <div class="label new">new</div>
@@ -723,10 +729,10 @@
                     <div class="price">
                       <span>168,00€</span>
                     </div>
-                  </div>
+                  </a>
                 </div>
                 <div class="swiper-slide">
-                  <div class="product-holder">
+                  <a href="javascript:void(0)" class="product-holder">
                     <div class="img-holder">
                       <img src="../assets/images/makita.png" alt="" />
                     </div>
@@ -751,10 +757,10 @@
                         <div class="difference">- 260,59 €</div>
                       </div>
                     </div>
-                  </div>
+                  </a>
                 </div>
                 <div class="swiper-slide">
-                  <div class="product-holder">
+                  <a href="javascript:void(0)" class="product-holder">
                     <div class="img-holder">
                       <img src="../assets/images/makita.png" alt="" />
                     </div>
@@ -779,7 +785,7 @@
                         <div class="difference">- 260,59 €</div>
                       </div>
                     </div>
-                  </div>
+                  </a>
                 </div>
               </div>
             </div>
@@ -795,6 +801,8 @@
 
       <div class="content-container">
         <div class="categories" data-aos="fade-down">
+          <div class="grid-sizer"></div>
+          <div class="gutter-sizer"></div>
           <div class="category">
             <div class="category-items">
               <div class="category-name">Baugeräte</div>
@@ -988,10 +996,10 @@
         </div>
       </div>
     </main>
-    <!-- <footer>
+    <footer>
       <div class="content-container">
         <div class="flex-container">
-          <div class="flex-content">
+          <div class="flex-content footer-logo">
             <div class="logo-holder">
               <img src="../assets/images/footer-logo.png" alt="" />
             </div>
@@ -1087,7 +1095,7 @@
           </div>
         </div>
       </div>
-    </footer> -->
+    </footer>
     <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
     <script src="../assets/scripts/aos.js"></script>
     <script src="../assets/scripts/swiper-bundle.min.js"></script>
