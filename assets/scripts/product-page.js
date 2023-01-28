@@ -3,6 +3,14 @@ const swiper = new Swiper('.thumb-product-slider', {
   slidesPerView: 5,
   freeMode: true,
   watchSlidesProgress: true,
+  breakpoints: {
+    520: {
+      slidesPerView: 6,
+    },
+    991: {
+      slidesPerView: 5,
+    },
+  },
 })
 
 const swiper2 = new Swiper('.main-product-slider', {
