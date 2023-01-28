@@ -5,7 +5,7 @@ const productSlider = new Swiper('.product-slider', {
   speed: 500,
   loop: true,
 
-  spaceBetween: 10,
+  spaceBetween: 60,
 
   // Navigation arrows
   navigation: {

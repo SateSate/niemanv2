@@ -1,6 +1,6 @@
 .machinery-item {
-  flex: 0 0 349px;
-  height: 185px;
+  flex: 0 0 23.5%;
+  min-height: 185px;
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -8,6 +8,14 @@
   justify-content: space-between;
   border: 1px dashed #2271b3;
   border-radius: 8px;
+  @media screen and (max-width: 991px) {
+    flex: 0 0 48%;
+    min-height: 150px;
+    padding: 15px;
+  }
+  @media screen and (max-width: 520px) {
+    flex: 0 0 100%;
+  }
   img {
     max-width: 120px;
     max-height: 100px;
