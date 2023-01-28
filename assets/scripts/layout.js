@@ -115,7 +115,7 @@ document.addEventListener('DOMContentLoaded', async function () {
   const loader = document.querySelector('.loader')
   await setTimeout(() => {
     loader.classList.add('loaded')
-  }, 300)
+  }, 500)
 
   await setTimeout(() => {
     loader.classList.add('d-none')

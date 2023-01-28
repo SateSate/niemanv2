@@ -1,7 +1,7 @@
 .equipment {
-  display: flex;
-  align-items: center;
-  gap: 20px;
+  // display: flex;
+  // align-items: center;
+  // gap: 20px;
   margin-bottom: 50px;
   .equipment-item {
     height: 462px;
@@ -9,7 +9,18 @@
     border: 1px dashed $blue;
     border-radius: 8px;
     padding: 30px;
-    flex: 0 0 353px;
+    display: block;
+    transition: border 0.3s linear;
+    @media screen and (max-width: 991px) {
+      height: 420px;
+      padding: 20px;
+    }
+    @media screen and (max-width: 640px) {
+      height: auto;
+    }
+    &:hover {
+      border: 1px solid #2271b3;
+    }
     .cat {
       font-size: 14px;
       margin-bottom: 8px;
@@ -30,6 +41,12 @@
         width: 100%;
         height: 230px;
         object-fit: cover;
+        @media screen and (max-width: 1380px) {
+          height: 200px;
+        }
+        @media screen and (max-width: 991px) {
+          height: 180px;
+        }
       }
     }
     .author {
@@ -47,6 +64,9 @@
       overflow: hidden;
       text-overflow: ellipsis;
       margin-bottom: 15px;
+      @media screen and (max-width: 991px) {
+        font-size: 16px;
+      }
     }
     .btn {
       background: #fff;
@@ -54,13 +74,13 @@
       color: $orange;
     }
     &.cover {
-      transition: border 0.1s linear;
-      flex: 0 0 483px;
-      &:hover {
-        border: 3px solid #2271b3;
+      @media screen and (max-width: 640px) {
+        height: 375px;
       }
       .img-holder {
+        min-height: inherit;
         height: 100%;
+
         &.overlay {
           position: relative;
           &::before {
@@ -78,8 +98,16 @@
         img {
           border-radius: 8px;
           height: 100%;
+          min-height: inherit;
         }
       }
     }
+  }
+  .swiper-button {
+    width: 44px;
+    height: 44px;
+    border: 1px solid #e5e5e5;
+    background: #f7f7f7;
+    border-radius: 50%;
   }
 }
