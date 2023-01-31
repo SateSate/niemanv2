@@ -41,10 +41,14 @@ topNavToggle.addEventListener('click', () => {
 
 const mainNavToggle = document.querySelector('.main-nav-toggle')
 const mainNavLinks = document.querySelector('.main-nav-list')
+const body = document.querySelector('body')
+const navOverlay = document.querySelector('.nav-overlay')
 
 mainNavToggle.addEventListener('click', () => {
   mainNavToggle.classList.toggle('active')
   mainNavLinks.classList.toggle('active')
+  body.classList.toggle('overflow-hidden')
+  navOverlay.classList.toggle('active')
 })
 
 document.addEventListener('click', (e) => {
