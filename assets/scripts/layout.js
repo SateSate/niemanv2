@@ -29,99 +29,109 @@ const productSlider = new Swiper('.product-slider', {
 })
 
 // header
-const topNavToggle = document.querySelector('.top-nav-toggle')
-const topNavLinks = document.querySelector('.top-nav-links')
-const topNav = document.querySelector('.top-nav')
+document.addEventListener('DOMContentLoaded', function () {
+  const topNavToggle = document.querySelector('.top-nav-toggle')
+  const topNavLinks = document.querySelector('.top-nav-links')
+  const topNav = document.querySelector('.top-nav')
 
-topNavToggle.addEventListener('click', () => {
-  topNavLinks.classList.toggle('active')
-  topNavToggle.classList.toggle('active')
-  topNav.classList.toggle('active')
-})
+  topNavToggle.addEventListener('click', () => {
+    topNavLinks.classList.toggle('active')
+    topNavToggle.classList.toggle('active')
+    topNav.classList.toggle('active')
+  })
 
-const mainNavToggle = document.querySelector('.main-nav-toggle')
-const mainNavLinks = document.querySelector('.main-nav-list')
-const body = document.querySelector('body')
-const navOverlay = document.querySelector('.nav-overlay')
+  const mainNavToggle = document.querySelector('.main-nav-toggle')
+  const mainNavLinks = document.querySelector('.main-nav-list')
+  const body = document.querySelector('body')
+  const navOverlay = document.querySelector('.nav-overlay')
+  const dropdown = document.querySelectorAll('.dropdown')
+  const dropdownSub = document.querySelectorAll('.dropdown-sub')
 
-mainNavToggle.addEventListener('click', () => {
-  mainNavToggle.classList.toggle('active')
-  mainNavLinks.classList.toggle('active')
-  body.classList.toggle('overflow-hidden')
-  navOverlay.classList.toggle('active')
-})
+  mainNavToggle.addEventListener('click', () => {
+    mainNavToggle.classList.toggle('active')
+    mainNavLinks.classList.toggle('active')
+    body.classList.toggle('overflow-hidden')
+    navOverlay.classList.toggle('active')
+    dropdown.forEach((item) => {
+      item.classList.remove('active')
+    })
+    dropdownSub.forEach((item) => {
+      item.classList.remove('active')
+    })
+  })
 
-document.addEventListener('click', (e) => {
-  if (e.target.closest('.top-nav')) return
-  topNavLinks.classList.remove('active')
-  topNavToggle.classList.remove('active')
-})
+  document.addEventListener('click', (e) => {
+    if (e.target.closest('.top-nav')) return
+    topNavLinks.classList.remove('active')
+    topNavToggle.classList.remove('active')
+  })
 
-function navLinksAction() {
-  const navLinks = document.querySelectorAll('.main-nav-list .nav-link')
-  navLinks.forEach((link) => {
-    const dropdown = link.nextElementSibling
-    const parent = link.parentElement
-    if (window.innerWidth >= 992) {
-      parent.addEventListener('mouseenter', () => {
-        if (dropdown) {
-          dropdown.classList.add('active')
-        }
-      })
-      parent.addEventListener('mouseleave', () => {
-        if (dropdown) {
-          dropdown.classList.remove('active')
-        }
-      })
-    } else if (window.innerWidth < 992) {
-      link.addEventListener('click', () => {
-        const dropdownSub = document.querySelectorAll('.dropdown-sub')
-        dropdownSub.forEach((sub) => {
-          sub.classList.remove('active')
+  function navLinksAction() {
+    const navLinks = document.querySelectorAll('.main-nav-list .nav-link')
+    navLinks.forEach((link) => {
+      const dropdown = link.nextElementSibling
+      const parent = link.parentElement
+      if (window.innerWidth >= 992) {
+        parent.addEventListener('mouseenter', () => {
+          if (dropdown) {
+            dropdown.classList.add('active')
+          }
         })
-        if (dropdown) {
-          dropdown.classList.toggle('active')
-        }
-      })
-    }
-  })
+        parent.addEventListener('mouseleave', () => {
+          if (dropdown) {
+            dropdown.classList.remove('active')
+          }
+        })
+      } else if (window.innerWidth < 992) {
+        link.addEventListener('click', () => {
+          const dropdownSub = document.querySelectorAll('.dropdown-sub')
+          dropdownSub.forEach((sub) => {
+            sub.classList.remove('active')
+          })
+          if (dropdown) {
+            dropdown.classList.toggle('active')
+          }
+        })
+      }
+    })
 
-  const dropDownLinks = document.querySelectorAll('.dropdown-link')
-  dropDownLinks.forEach((link) => {
-    const dropdown = link.querySelector('.dropdown-sub')
-    if (window.innerWidth >= 992) {
-      link.addEventListener('mouseenter', () => {
-        if (dropdown) {
-          dropdown.classList.add('active')
-        }
-      })
-      link.addEventListener('mouseleave', () => {
-        if (dropdown) {
-          dropdown.classList.remove('active')
-        }
-      })
-    } else if (window.innerWidth < 992) {
-      link.addEventListener('click', () => {
-        // add active class to dropdown and remove from other dropdowns
-        if (dropdown) {
-          dropdown.classList.toggle('active')
-        }
-      })
-    }
-  })
-}
+    const dropDownLinks = document.querySelectorAll('.dropdown-link')
+    dropDownLinks.forEach((link) => {
+      const dropdown = link.querySelector('.dropdown-sub')
+      if (window.innerWidth >= 992) {
+        link.addEventListener('mouseenter', () => {
+          if (dropdown) {
+            dropdown.classList.add('active')
+          }
+        })
+        link.addEventListener('mouseleave', () => {
+          if (dropdown) {
+            dropdown.classList.remove('active')
+          }
+        })
+      } else if (window.innerWidth < 992) {
+        link.addEventListener('click', () => {
+          // add active class to dropdown and remove from other dropdowns
+          if (dropdown) {
+            dropdown.classList.toggle('active')
+          }
+        })
+      }
+    })
+  }
 
-navLinksAction()
-window.addEventListener('resize', navLinksAction)
+  navLinksAction()
+  window.addEventListener('resize', navLinksAction)
+})
 
 // on document ready fade out the preloader without using jquery
-document.addEventListener('DOMContentLoaded', async function () {
+document.addEventListener('DOMContentLoaded', function () {
   const loader = document.querySelector('.loader')
-  await setTimeout(() => {
+  setTimeout(() => {
     loader.classList.add('loaded')
   }, 500)
 
-  await setTimeout(() => {
+  setTimeout(() => {
     loader.classList.add('d-none')
   }, 1000)
 })
