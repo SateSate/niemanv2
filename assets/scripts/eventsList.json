@@ -1,0 +1,53 @@
+{
+  "name": "Nieman Events",
+  "events": [
+    {
+      "name": "Snickers",
+      "description": "Metal working  Machines Lorem ipsum dolor random text coming here to replace information content.",
+      "date": "03/03/2023",
+      "time": "12:00",
+      "pdfUrl": "http://www.google.com",
+      "highlight": true,
+      "location": {
+        "venue": "FNaction",
+        "city": "Kiel"
+      }
+    },
+    {
+      "name": "Makita",
+      "description": "Der DHP484T4JB Akku-Schlagbohrschrauber - das Jubiläumsmodell 45 Jahre Makita in schwarz in der FN100",
+      "date": "04/01/2023",
+      "time": "12:00",
+      "pdfUrl": "http://www.google.com",
+      "highlight": false,
+      "location": {
+        "venue": "FNmessen",
+        "city": "Hamburg"
+      }
+    },
+    {
+      "name": "Snickers",
+      "description": "Metal working  Machines Lorem ipsum dolor random text coming here to replace information content.",
+      "date": "03/04/2023",
+      "time": "12:00",
+      "pdfUrl": "http://www.google.com",
+      "highlight": false,
+      "location": {
+        "venue": "FNaction",
+        "city": "Kiel"
+      }
+    },
+    {
+      "name": "Makita",
+      "description": "Der DHP484T4JB Akku-Schlagbohrschrauber - das Jubiläumsmodell 45 Jahre Makita in schwarz in der FN100",
+      "date": "03/04/2023",
+      "time": "12:00",
+      "pdfUrl": "http://www.google.com",
+      "highlight": false,
+      "location": {
+        "venue": "FNmessen",
+        "city": "Hamburg"
+      }
+    }
+  ]
+}

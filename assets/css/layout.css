@@ -2844,6 +2844,84 @@ footer .logo-holder {
   color: #6a6a6a;
 }
 
+.events-list .event {
+  display: flex;
+  padding: 30px 40px;
+  border-bottom: 1px solid #b7b7b7;
+}
+.events-list .event.highlight {
+  background-color: #2271b3;
+  color: #fff;
+}
+.events-list .event.highlight .date-holder .time {
+  color: #fff;
+}
+.events-list .event.highlight .event-info .event-title {
+  color: #fff;
+}
+.events-list .event.highlight .event-info .event-description {
+  color: #fff;
+}
+.events-list .event.highlight .pdf {
+  color: #fff;
+}
+.events-list .event.past {
+  background-color: #e5e5e5;
+}
+.events-list .event .date-holder {
+  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 0 0 10%;
+}
+.events-list .event .date-holder .date {
+  font-size: 26px;
+  line-height: 32px;
+}
+.events-list .event .date-holder .time {
+  font-size: 16px;
+  line-height: 22px;
+  color: #b7b7b7;
+}
+.events-list .event .pdf {
+  font-size: 18px;
+  display: block;
+  color: #2271b3;
+  text-decoration: underline;
+  flex: 0 0 10%;
+  text-align: center;
+}
+.events-list .event .event-info {
+  flex: 0 0 60%;
+  margin-left: 20px;
+}
+.events-list .event .event-info .event-title {
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 32px;
+  color: #2271b3;
+}
+.events-list .event .event-info .event-description {
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 26px;
+}
+.events-list .event .location {
+  font-weight: 700;
+  text-align: right;
+  width: 100%;
+}
+.events-list .event .location .venue {
+  font-size: 26px;
+  line-height: 32px;
+}
+.events-list .event .location .city {
+  font-size: 16px;
+  line-height: 32px;
+  color: #b7b7b7;
+}
+
 body {
   font-family: "Inter", sans-serif;
   font-weight: 400;
