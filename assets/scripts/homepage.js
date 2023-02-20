@@ -78,8 +78,8 @@ AOS.init({
   duration: 1000,
 })
 
-var elem = document.querySelector('.categories')
-var iso = new Isotope(elem, {
+var grid = document.querySelector('.categories')
+var iso = new Isotope(grid, {
   // options
   itemSelector: '.category',
   layoutMode: 'masonry',
@@ -88,4 +88,9 @@ var iso = new Isotope(elem, {
     gutter: '.gutter-sizer',
     columnWidth: '.grid-sizer',
   },
+})
+
+imagesLoaded(grid).on('progress', function () {
+  // layout Isotope after each image loads
+  iso.layout()
 })
