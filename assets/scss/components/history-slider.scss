@@ -6,6 +6,9 @@
   .pagination {
     text-align: center;
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     &::before {
       content: '';
       position: absolute;
@@ -21,6 +24,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex: 1;
   }
 
   .pagination .year-button {
@@ -87,5 +91,22 @@
 
   .timeline {
     transition: all 0.5s ease;
+  }
+  .nav {
+    width: 44px;
+    height: 44px;
+    background-color: #2271b3;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &.prev {
+      margin-right: 20px;
+    }
+    &.next {
+      margin-left: 20px;
+    }
   }
 }

@@ -20,6 +20,23 @@ document.addEventListener('DOMContentLoaded', function () {
   let activeYearIndex = 0;
   setActiveYear(activeYearIndex);
 
+  const prevButton = document.querySelector('.pagination .nav.prev');
+  const nextButton = document.querySelector('.pagination .nav.next');
+
+  prevButton.addEventListener('click', function () {
+    if (activeYearIndex > 0) {
+      setActiveYear(activeYearIndex - 1);
+      activeYearIndex--;
+    }
+  });
+
+  nextButton.addEventListener('click', function () {
+    if (activeYearIndex < years.length - 1) {
+      setActiveYear(activeYearIndex + 1);
+      activeYearIndex++;
+    }
+  });
+
   function setActiveYear(index) {
     years.forEach(function (year, yearIndex) {
       if (yearIndex === index) {

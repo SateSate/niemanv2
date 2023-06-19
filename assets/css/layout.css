@@ -2928,6 +2928,9 @@ footer .logo-holder {
 .nieman-history .pagination {
   text-align: center;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .nieman-history .pagination::before {
   content: "";
@@ -2942,6 +2945,7 @@ footer .logo-holder {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex: 1;
 }
 .nieman-history .pagination .year-button {
   width: 16px;
@@ -2999,6 +3003,23 @@ footer .logo-holder {
 }
 .nieman-history .timeline {
   transition: all 0.5s ease;
+}
+.nieman-history .nav {
+  width: 44px;
+  height: 44px;
+  background-color: #2271b3;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nieman-history .nav.prev {
+  margin-right: 20px;
+}
+.nieman-history .nav.next {
+  margin-left: 20px;
 }
 
 body {
