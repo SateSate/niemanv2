@@ -2958,6 +2958,7 @@ footer .logo-holder {
   cursor: pointer;
   position: relative;
   z-index: 99;
+  pointer-events: none;
 }
 .nieman-history .pagination .year-button span {
   display: none;
@@ -3020,6 +3021,38 @@ footer .logo-holder {
 }
 .nieman-history .nav.next {
   margin-left: 20px;
+}
+@media screen and (max-width: 767px) {
+  .nieman-history .pagination .year-button {
+    width: 12px;
+    height: 12px;
+    font-size: 10px;
+  }
+  .nieman-history .pagination .year-button.active {
+    width: 40px;
+    height: 40px;
+  }
+  .nieman-history .pagination .year-button:not(.active):nth-child(odd) {
+    display: none;
+  }
+  .nieman-history .pagination::before {
+    height: 2px;
+    top: calc(50% - 1px);
+  }
+  .nieman-history .nav {
+    width: 30px;
+    height: 30px;
+  }
+  .nieman-history .nav.prev {
+    margin-right: 3px;
+  }
+  .nieman-history .nav.next {
+    margin-left: 3px;
+  }
+  .nieman-history .nav img {
+    width: 7px;
+    object-fit: contain;
+  }
 }
 
 body {
