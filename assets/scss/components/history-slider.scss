@@ -26,6 +26,7 @@
     font-size: 16px;
     color: #2271b3;
     bottom: 0;
+    pointer-events: none;
     &.left {
       left: 50px;
     }
