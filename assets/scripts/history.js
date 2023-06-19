@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   let activeYearIndex = 0;
+  let activeButtonIndex = Math.floor(years.length / 2);
   setActiveYear(activeYearIndex);
 
   const prevButton = document.querySelector('.pagination .nav.prev');
@@ -25,15 +26,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
   prevButton.addEventListener('click', function () {
     if (activeYearIndex > 0) {
-      setActiveYear(activeYearIndex - 1);
       activeYearIndex--;
+      setActiveYear(activeYearIndex);
     }
   });
 
   nextButton.addEventListener('click', function () {
     if (activeYearIndex < years.length - 1) {
-      setActiveYear(activeYearIndex + 1);
       activeYearIndex++;
+      setActiveYear(activeYearIndex);
     }
   });
 
@@ -47,10 +48,12 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     yearButtons.forEach(function (button, buttonIndex) {
-      if (buttonIndex === index) {
+      if (buttonIndex === activeButtonIndex) {
         button.classList.add('active');
         button.classList.remove('future');
-      } else if (buttonIndex > index) {
+        // Set the button's text to the active year
+        button.children[0].innerText = years[activeYearIndex].dataset.year;
+      } else if (buttonIndex > activeButtonIndex) {
         button.classList.add('future');
         button.classList.remove('active');
       } else {
