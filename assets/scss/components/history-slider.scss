@@ -20,6 +20,20 @@
     }
   }
 
+  .label {
+    position: absolute;
+    font-weight: 700;
+    font-size: 16px;
+    color: #2271b3;
+    bottom: 0;
+    &.left {
+      left: 50px;
+    }
+    &.right {
+      right: 50px;
+    }
+  }
+
   .pagination .years {
     display: flex;
     justify-content: space-between;
@@ -144,6 +158,11 @@
         width: 7px;
         object-fit: contain;
       }
+    }
+
+    .label {
+      bottom: -10px;
+      font-size: 12px;
     }
   }
 }

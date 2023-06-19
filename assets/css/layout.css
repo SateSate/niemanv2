@@ -2941,6 +2941,19 @@ footer .logo-holder {
   height: 5px;
   background-color: #2271b3;
 }
+.nieman-history .label {
+  position: absolute;
+  font-weight: 700;
+  font-size: 16px;
+  color: #2271b3;
+  bottom: 0;
+}
+.nieman-history .label.left {
+  left: 50px;
+}
+.nieman-history .label.right {
+  right: 50px;
+}
 .nieman-history .pagination .years {
   display: flex;
   justify-content: space-between;
@@ -3052,6 +3065,10 @@ footer .logo-holder {
   .nieman-history .nav img {
     width: 7px;
     object-fit: contain;
+  }
+  .nieman-history .label {
+    bottom: -10px;
+    font-size: 12px;
   }
 }
 
