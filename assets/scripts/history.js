@@ -7,11 +7,16 @@ document.addEventListener('DOMContentLoaded', function () {
     const yearButtonHolder = document.createElement('div');
     const yearButton = document.createElement('div');
     const yearButtonSpan = document.createElement('span');
+    const line = document.createElement('div');
+
     yearButtonHolder.classList.add('year-button-holder');
     yearButton.classList.add('year-button');
     yearButtonSpan.classList.add('year-button-span');
+    line.classList.add('line');
+
     yearButtonSpan.innerText = year.dataset.year;
     yearButton.appendChild(yearButtonSpan);
+    yearButtonHolder.appendChild(line);
     yearButtonHolder.appendChild(yearButton);
     yearsContainer.appendChild(yearButtonHolder);
 
@@ -25,23 +30,6 @@ document.addEventListener('DOMContentLoaded', function () {
   let activeYearIndex = 0;
   setActiveYear(activeYearIndex);
 
-  // const prevButton = document.querySelector('.pagination .nav.prev');
-  // const nextButton = document.querySelector('.pagination .nav.next');
-
-  // prevButton.addEventListener('click', function () {
-  //   if (activeYearIndex > 0) {
-  //     activeYearIndex--;
-  //     setActiveYear(activeYearIndex);
-  //   }
-  // });
-
-  // nextButton.addEventListener('click', function () {
-  //   if (activeYearIndex < years.length - 1) {
-  //     activeYearIndex++;
-  //     setActiveYear(activeYearIndex);
-  //   }
-  // });
-
   function setActiveYear(index) {
     years.forEach(function (year, yearIndex) {
       if (yearIndex === index) {
@@ -52,14 +40,20 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     yearButtons.forEach(function (button, buttonIndex) {
+      const yearButtonHolder = button.parentElement;
       if (buttonIndex === index) {
         button.classList.add('active');
         button.classList.remove('future');
+        yearButtonHolder.classList.add('active');
+        yearButtonHolder.classList.remove('future');
       } else if (buttonIndex > index) {
         button.classList.add('future');
         button.classList.remove('active');
+        yearButtonHolder.classList.add('future');
+        yearButtonHolder.classList.remove('active');
       } else {
         button.classList.remove('active', 'future');
+        yearButtonHolder.classList.remove('active', 'future');
       }
     });
 
