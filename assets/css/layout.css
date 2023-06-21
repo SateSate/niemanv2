@@ -2945,6 +2945,20 @@ footer .logo-holder {
   height: 5px;
   background-color: #2271b3;
 }
+.nieman-history .blank {
+  position: absolute;
+  width: 44px;
+  height: 100%;
+  background: white;
+  z-index: 9;
+  top: 0;
+}
+.nieman-history .blank.left {
+  left: 0;
+}
+.nieman-history .blank.right {
+  right: 0;
+}
 .nieman-history .label {
   position: absolute;
   font-weight: 700;
@@ -2979,7 +2993,6 @@ footer .logo-holder {
   justify-content: center;
   cursor: pointer;
   position: relative;
-  z-index: 99;
 }
 .nieman-history .pagination .year-button span {
   position: absolute;
@@ -3037,37 +3050,21 @@ footer .logo-holder {
 .nieman-history .nav.next {
   margin-left: 60px;
 }
-@media screen and (max-width: 767px) {
-  .nieman-history .pagination .year-button {
-    width: 12px;
-    height: 12px;
-    font-size: 10px;
+@media screen and (max-width: 1200px) {
+  .nieman-history .pagination {
+    width: 100%;
   }
-  .nieman-history .pagination .year-button.active {
-    width: 40px;
-    height: 40px;
-  }
-  .nieman-history .pagination::before {
-    height: 2px;
-    top: calc(50% - 1px);
-  }
-  .nieman-history .nav {
-    width: 30px;
-    height: 30px;
-  }
+}
+@media screen and (max-width: 660px) {
   .nieman-history .nav.prev {
-    margin-right: 3px;
+    margin-right: 10px;
+    flex: 0 0 44px;
   }
   .nieman-history .nav.next {
-    margin-left: 3px;
-  }
-  .nieman-history .nav img {
-    width: 7px;
-    object-fit: contain;
-  }
-  .nieman-history .label {
-    bottom: -10px;
-    font-size: 12px;
+    margin-left: 10px;
+    flex: 0 0 44px;
+    position: absolute;
+    right: 0;
   }
 }
 .nieman-history .year-button-holder {

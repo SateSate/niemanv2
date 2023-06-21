@@ -24,6 +24,21 @@
     }
   }
 
+  .blank {
+    position: absolute;
+    width: 44px;
+    height: 100%;
+    background: white;
+    z-index: 9;
+    top: 0;
+    &.left {
+      left: 0;
+    }
+    &.right {
+      right: 0;
+    }
+  }
+
   .label {
     position: absolute;
     font-weight: 700;
@@ -60,7 +75,6 @@
     justify-content: center;
     cursor: pointer;
     position: relative;
-    z-index: 99;
     // pointer-events: none;
     span {
       position: absolute;
@@ -135,43 +149,63 @@
       margin-left: 60px;
     }
   }
-  @media screen and (max-width: 767px) {
-    .pagination .year-button {
-      width: 12px;
-      height: 12px;
-      font-size: 10px;
-      &.active {
-        width: 40px;
-        height: 40px;
-      }
-    }
-
+  @media screen and (max-width: 1200px) {
     .pagination {
-      &::before {
-        height: 2px;
-        top: calc(50% - 1px);
-      }
-    }
-    .nav {
-      width: 30px;
-      height: 30px;
-      &.prev {
-        margin-right: 3px;
-      }
-      &.next {
-        margin-left: 3px;
-      }
-      img {
-        width: 7px;
-        object-fit: contain;
-      }
-    }
-
-    .label {
-      bottom: -10px;
-      font-size: 12px;
+      width: 100%;
     }
   }
+  @media screen and (max-width: 660px) {
+    .nav {
+      &.prev {
+        margin-right: 10px;
+        flex: 0 0 44px;
+      }
+      &.next {
+        margin-left: 10px;
+        flex: 0 0 44px;
+        position: absolute;
+        right: 0;
+      }
+    }
+  }
+  // @media screen and (max-width: 767px) {
+  //   .pagination .year-button {
+  //     width: 12px;
+  //     height: 12px;
+  //     font-size: 10px;
+  //     &.active {
+  //       width: 40px;
+  //       height: 40px;
+  //     }
+  //   }
+
+  //   .pagination {
+  //     &::before {
+  //       height: 2px;
+  //       top: calc(50% - 1px);
+  //     }
+  //   }
+  //   .nav {
+  //     width: 30px;
+  //     height: 30px;
+  //     position: relative;
+  //     &.prev {
+  //       margin-right: 3px;
+  //     }
+  //     &.next {
+  //       margin-left: 3px;
+  //     }
+  //     img {
+  //       width: 7px;
+  //       object-fit: contain;
+  //     }
+  //   }
+
+  //   .label {
+  //     bottom: -10px;
+  //     font-size: 12px;
+  //   }
+  // }
 
   .year-button-holder {
     flex: 0 0 23%;

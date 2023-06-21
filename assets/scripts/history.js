@@ -69,10 +69,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
     timeline.style.transform = `translateY(-${activeYearTop - timelineTop}px)`;
 
-    const activeYearData = years[activeYearIndex].dataset.year;
-    const activeYearElement = document.querySelector('.year.active');
-    activeYearElement.querySelector('.about-text h2').innerText =
-      activeYearData;
+    const visibleYears = years.filter(function (year, yearIndex) {
+      return yearIndex >= index;
+    });
+    const visibleYearsHeight = visibleYears.reduce(function (
+      totalHeight,
+      year
+    ) {
+      return totalHeight + year.offsetHeight;
+    },
+    0);
+    const timelineContainer = document.querySelector('.timeline-container');
+    timelineContainer.style.height = visibleYearsHeight + 'px';
   }
 });
 
@@ -85,7 +93,10 @@ const yearsContainer = document.querySelector('.pagination .years');
 let translateValue = 0;
 
 // Define the translation amount in pixels
-const translationAmount = 400; // Adjust this value based on your desired translation
+let translationAmount = 400; // Adjust this value based on your desired translation
+if (window.innerWidth < 768) {
+  translationAmount = 200;
+}
 
 // Add click event listener to the next button
 nextButton.addEventListener('click', function () {
